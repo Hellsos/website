@@ -31,11 +31,11 @@ technologyListMap.set( "angular", {
 	icon : "./assets/img/3rd/favicon-angular.ico",
 	alt : "Angular Framework"
 } );
-technologyListMap.set( "mongodb", {
-	name : "MongoDB",
-	icon : "https://www.mongodb.com/assets/images/global/favicon.ico",
-	alt : "MongoDB - NoSQL Database"
-} );
+// technologyListMap.set( "mongodb", {
+// 	name : "MongoDB",
+// 	icon : "https://www.mongodb.com/assets/images/global/favicon.ico",
+// 	alt : "MongoDB - NoSQL Database"
+// } );
 technologyListMap.set( "sql", {
 	name : "SQL",
 	icon : "./assets/img/3rd/favicon-sql.png",
@@ -51,19 +51,19 @@ technologyListMap.set( "laravel", {
 	icon : "./assets/img/3rd/favicon-laravel.ico",
 	alt : "Laravel PHP Framework"
 } );
-technologyListMap.set( "jquery", {
-	name : "JQuery",
-	icon : "./assets/img/3rd/favicon-jquery.ico",
-	alt : "JQuery Library"
-} );
-technologyListMap.set( "html", {
-	name : "Html",
-	icon : "./assets/img/3rd/favicon-html.png"
-} );
-technologyListMap.set( "css", {
-	name : "CSS",
-	icon : "./assets/img/3rd/favicon-css.svg"
-} );
+// technologyListMap.set( "jquery", {
+// 	name : "JQuery",
+// 	icon : "./assets/img/3rd/favicon-jquery.ico",
+// 	alt : "JQuery Library"
+// } );
+// technologyListMap.set( "html", {
+// 	name : "Html",
+// 	icon : "./assets/img/3rd/favicon-html.png"
+// } );
+// technologyListMap.set( "css", {
+// 	name : "CSS",
+// 	icon : "./assets/img/3rd/favicon-css.svg"
+// } );
 technologyListMap.set( "googlecharts", {
 	name : "Google Charts",
 	icon : "./assets/img/3rd/favicon-googlecharts.png",
@@ -88,7 +88,7 @@ technologyListMap.set( "docker", {
 } );
 technologyListMap.set( "webpack", {
 	name : "Webpack",
-	icon : "https://webpack.js.org/bc3effb418df77da9e04825c48a58a49.ico"
+	icon : "https://raw.githubusercontent.com/webpack/media/master/logo/icon-square-small.png"
 } );
 technologyListMap.set( "yarn", {
 	name : "Yarn",
@@ -110,7 +110,7 @@ interface IProjectListItem {
 		github? : string;
 		live? : string
 	},
-	date: number;
+	date : number;
 	status : boolean | null;
 	description : string
 	clientSideList? : Array<ITechnologyListItem>;
@@ -118,58 +118,75 @@ interface IProjectListItem {
 }
 
 const projectsListMap : Map<string, IProjectListItem> = new Map();
-projectsListMap.set('denowebsockets', {
-	name: 'Websockets for Deno',
-	link: {
-		github: 'https://github.com/Hellsos/deno_websockets'
+projectsListMap.set( "reactinstafeed", {
+	name : "Instagram User Media Feed Widget",
+	link : {
+		github : "https://github.com/Hellsos/insta-feed-widget"
 	},
-	date: 2020,
-	status: null,
-	description: `A websocket library for Deno inspired by Socket.IO`,
-	serverSideList: [
-		technologyListMap.get('deno')!,
-		technologyListMap.get('typescript')!,
-		technologyListMap.get('javascript')!,
-		technologyListMap.get('git')!
+	date : 2021,
+	status : true,
+	description : `Instagram User Media Feed Widget using React.js.`,
+	serverSideList : [
+		technologyListMap.get( "react" )!,
+		technologyListMap.get( "typescript" )!,
+		technologyListMap.get( "javascript" )!,
+		technologyListMap.get( "git" )!,
 	]
-})
-projectsListMap.set('denodotenvfile', {
-	name: 'DotEnv File for Deno',
-	link: {
-		github: 'https://github.com/Hellsos/deno-dotenv-file'
+} );
+projectsListMap.set( "denoinstafeed", {
+	name : "Instagram User Media Feed",
+	link : {
+		github : "https://github.com/Hellsos/deno-insta-feed"
 	},
-	date: 2020,
-	status: true,
-	description: `A library for Deno parsing .env file into object-oriented structure making it more friendly for working in IDEs.`,
-	serverSideList: [
-		technologyListMap.get('deno')!,
-		technologyListMap.get('typescript')!,
-		technologyListMap.get('javascript')!,
-		technologyListMap.get('git')!
+	date : 2021,
+	status : true,
+	description : `Instagram User Media Feed API using Deno TypeScript Runtime.`,
+	serverSideList : [
+		technologyListMap.get( "deno" )!,
+		technologyListMap.get( "typescript" )!,
+		technologyListMap.get( "javascript" )!,
+		technologyListMap.get( "sql" )!,
+		technologyListMap.get( "git" )!,
+		technologyListMap.get( "instagramapi" )!,
 	]
-})
-projectsListMap.set('blogmihmanli', {
-	name: 'Blog - Mihmanli',
-	previewImg: './assets/img/asset_mihmanli.png',
-	link: {
-		live: 'https://kristyna.mihmanli.com/'
+} );
+projectsListMap.set( "denodotenvfile", {
+	name : "DotEnv File for Deno",
+	link : {
+		github : "https://github.com/Hellsos/deno-dotenv-file"
 	},
-	date: 2017,
-	status: true,
-	description: `Personal blog with administration allowing logged user to create groups, posts, galleries publicly accessible or privately accessible with custom code.
+	date : 2020,
+	status : true,
+	description : `A library for Deno parsing .env file into object-oriented structure making it more friendly for working in IDEs.`,
+	serverSideList : [
+		technologyListMap.get( "deno" )!,
+		technologyListMap.get( "typescript" )!,
+		technologyListMap.get( "javascript" )!,
+		technologyListMap.get( "git" )!
+	]
+} );
+projectsListMap.set( "blogmihmanli", {
+	name : "Blog - Mihmanli",
+	previewImg : "./assets/img/asset_mihmanli.png",
+	link : {
+		live : "https://kristyna.mihmanli.com/"
+	},
+	date : 2017,
+	status : true,
+	description : `Personal blog with administration allowing logged user to create groups, posts, galleries publicly accessible or privately accessible with custom code.
                       <br>Data feed from Instagram is every hour synchronized via Instagram - API providing images, videos and its data. Images are stored on storage server and data are inserted into SQL database.`,
-	clientSideList: [
-		technologyListMap.get( "jquery")!,
-		technologyListMap.get( "html")!,
-		technologyListMap.get( "css")!
+	clientSideList : [
+		technologyListMap.get( "jquery" )!,
+		technologyListMap.get( "html" )!,
+		technologyListMap.get( "css" )!
 	],
-	serverSideList: [
-		technologyListMap.get( "laravel")!,
-		technologyListMap.get( "sql")!,
-		technologyListMap.get( "redis")!,
-		technologyListMap.get( "instagramapi")!,
+	serverSideList : [
+		technologyListMap.get( "laravel" )!,
+		technologyListMap.get( "sql" )!,
+		technologyListMap.get( "redis" )!,
+		technologyListMap.get( "instagramapi" )!,
 	]
-})
+} );
 projectsListMap.set( "weatherstation", {
 	name : "WeatherStation Stats",
 	previewImg : "./assets/img/asset_weather_station.png",
@@ -372,18 +389,19 @@ ${ Array.from( technologyListMap.values() ).map( ( technology ) => {
 						</div>
 					</li>
 					${ project.clientSideList && project.clientSideList.length > 0 ?
-	`<li>
+		`<li>
 						<div class="project-item-right-label">
 							<h5>Client Side</h5>
 						</div>
 						<div class="project-item-right-content list">
 							<ul class="skill-list">
 					${ project.clientSideList.map( ( technology ) => {
-		return `<li><img src="${ technology.icon }" style="height: 18px" title="${ technology.name }" alt="${ technology.alt || technology.name }"> ${ technology.name } </li>`;
-	} ).join( "\n" ) }
+			if ( technology == null ) return;
+			return `<li><img src="${ technology.icon }" style="height: 18px" title="${ technology.name }" alt="${ technology.alt || technology.name }"> ${ technology.name } </li>`;
+		} ).join( "\n" ) }
 							</ul>
 						</div>
-					</li>`: ''
+					</li>` : ""
 	}
 					${ project.serverSideList && project.serverSideList.length > 0 ? `<li>
 						<div class="project-item-right-label">
@@ -392,11 +410,12 @@ ${ Array.from( technologyListMap.values() ).map( ( technology ) => {
 						<div class="project-item-right-content list">
 							<ul class="skill-list">
 							${ project.serverSideList.map( ( technology ) => {
+		if ( technology == null ) return;
 		return `<li><img src="${ technology.icon }" style="height: 18px" title="${ technology.name }" alt="${ technology.alt || technology.name }"> ${ technology.name } </li>`;
 	} ).join( "\n" ) }
 							</ul>
 						</div>
-					</li>`: ''
+					</li>` : ""
 	}
 				 </ul>
 				</div>
